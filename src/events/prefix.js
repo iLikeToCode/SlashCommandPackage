@@ -3,7 +3,7 @@ const terminal = require('./terminal')
 module.exports = {
     name: 'interactionCreate',
     async execute(message) {
-        if (!interaction.isCommand()) return;
+        if (!message.content.startswith(`${process.env.prefix}`) return;
 
         const command = client.commands.get(message.content.split(`${process.env.prefix}`)[1]);
 
