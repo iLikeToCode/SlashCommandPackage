@@ -5,7 +5,7 @@ module.exports = {
     async execute(message, client) {
         if (message.author.bot) return;
         if (!message.content.startsWith(`${process.env.prefix}`)) return;
-        terminal.info(`${message.user.username} (${message.user.id}) | ${message.guild.name} ${message.guild.id} > [ ${message.content} ]`)
+        terminal.info(`${message.author.username} (${message.author.id}) | ${message.guild.name} ${message.guild.id} > [ ${message.content} ]`)
 
         const command = client.commands.get(message.content.split(`${process.env.prefix}`)[1]);
 
