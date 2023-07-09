@@ -1,8 +1,10 @@
+const terminal = require('../terminal')
+
 module.exports = {
     name: 'ready',
     once: true,
     async execute(client) {
-        console.log('Ready!');
+        terminal.success(`Logged in as ${client.user.tag}`);
 
         async function pickPresence () {
             const option = Math.floor(Math.random() * statusArray.length);
