@@ -2,7 +2,7 @@ const terminal = require('../terminal')
 
 module.exports = {
     name: 'messageCreate',
-    async execute(message) {
+    async execute(message, client) {
         if (message.author.bot) return;
         if (!message.content.startsWith(`${process.env.prefix}`)) return;
 
@@ -20,3 +20,4 @@ module.exports = {
             });
         }
     },
+};
