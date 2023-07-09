@@ -1,9 +1,10 @@
-const terminal = require('./terminal')
+const terminal = require('../terminal')
 
 module.exports = {
-    name: 'interactionCreate',
+    name: 'messageCreate',
     async execute(message) {
-        if (!message.content.startswith(`${process.env.prefix}`) return;
+        if (message.author.bot) return;
+        if (!message.content.startsWith(`${process.env.prefix}`)) return;
 
         const command = client.commands.get(message.content.split(`${process.env.prefix}`)[1]);
 
@@ -19,4 +20,3 @@ module.exports = {
             });
         }
     },
-};
