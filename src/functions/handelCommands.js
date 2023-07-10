@@ -33,7 +33,7 @@ module.exports = (client) => {
 
                 terminal.success('Successfully reloaded application (/) commands.');
             } catch (error) {
-                terminal.error(error);
+                terminal.error(error.stack);
             }
         })();
     };
