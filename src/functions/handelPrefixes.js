@@ -5,7 +5,7 @@ const clientId = process.env.clientId;
 
 module.exports = (client) => {
     client.handlePrefixes = async (prefixFolders) => {
-        if (!process.env.prefix) return terminal.warn('No prefix set in .env, disabling prefix module.')
+        if (!process.env.prefix) return terminal.debug('No prefix set in .env, disabling prefix module.')
 
         try {
             terminal.info(`Started refreshing prefix (${process.env.prefix}) commands.`);
