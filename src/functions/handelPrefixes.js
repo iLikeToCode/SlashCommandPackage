@@ -16,7 +16,6 @@ module.exports = (client) => {
                 for (const file of commandFiles) {
                     const command = require(`../prefixCommands/${folder}/${file}`);
                     client.prefixCommands.set(command.name, command);
-                    client.prefixArray.push(command.name);
                 }
             }
 

@@ -1,4 +1,4 @@
-const terminal = require('./terminal')
+const terminal = require('../terminal')
 
 module.exports = {
     name: 'interactionCreate',

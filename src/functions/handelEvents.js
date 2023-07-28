@@ -12,7 +12,7 @@ module.exports = (client) => {
                     client.on(event.name, (...args) => event.execute(...args, client));
                 }
             }
-            terminal.sucess('Sucessfully loaded all events!')
+            terminal.success('Sucessfully loaded all events!')
         } catch(error) {
             terminal.error(error)
         }

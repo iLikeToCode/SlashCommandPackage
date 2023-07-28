@@ -23,3 +23,22 @@ const prefixFolders = fs.readdirSync("./src/prefixCommands");
     client.handlePrefixes(prefixFolders)
     client.login(process.env.token)
 })();
+
+
+
+
+
+
+
+// Removes First Space from a string.
+globalThis.removeFirstSpace = (args) => {
+    let m;
+    const regex = /\s(.*)/gm;
+    while ((m = regex.exec(args)) !== null) {
+        if (m.index === regex.lastIndex) {
+            regex.lastIndex++;
+        }
+        args = m[1]
+        return args;
+    }
+}
