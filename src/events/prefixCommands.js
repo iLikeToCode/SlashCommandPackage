@@ -14,7 +14,8 @@ module.exports = {
 
         try {
             let args = message.content.split(process.env.prefix)[1].split(command.name)[1];
-            args = removeFirstSpace(args)
+            // below code removes that first space
+            let m;const regex = /\s(.*)/gm;while ((m = regex.exec(args)) !== null) {if (m.index === regex.lastIndex) {regex.lastIndex++;}args = m[1];}
             let argsArray = args.split(' ');
             await command.execute(message, { args, argsArray });
         } catch (error) {
