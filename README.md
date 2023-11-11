@@ -2,7 +2,7 @@ This is a slash command package I built when I was bored.
 It includes slash commands and optional prefix commands.
 
 # Guide on setting it up:
-- Download ZIP from https://github.com/iLikeToCode/SlashCommandPackage.git
+- Download ZIP from https://github.com/iLikeToCode/SlashCommandPackage
     - Unzip the ZIP file.
     - Open the extracted folder in a terminal
 - Type npm i, I have included a package.json and package-lock.json for easy package install.
